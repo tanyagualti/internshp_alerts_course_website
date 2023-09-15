@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       *{
+           padding: 0px;
+           margin: 0px;
+       }
+        .overley{
+          background-color: transparent;
+
+
+
+            width: 100vw;
+            height: 100vh;
+            z-index:9;
+            position: fixed;
+            top: 0;
+            z-index:-1;
+            opacity: 0;
+          
+        }
+        .showoverley{
+     opacity: 1;
+     z-index: 9;
+        }
+        .btn{
+         
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 50px;
+            border-radius: 30px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+     
+        }
+        .btn1{
+            /* background-color:#ff1493; */
+            /* background-color: deeppink; */
+            background-color: rgb(255, 51, 102);
+            /* background-image: url(bg.jpg); */
+            height: 40px;
+            width: 80%;
+            margin: 20px;
+            border-radius: 20px;
+            color: white;
+            font-size: 20px;
+            border-color: white;
+            margin-top: 50px;
+
+        }
+        .form{
+            width: 300px;
+            height: 500px;
+            background-color: white;
+            position: absolute;
+            /* transform: translate(-50%,-50%); */
+            transform: translateY(-100%);
+            left: 50%;
+            top: 50%;
+            padding: 20px;
+            box-shadow: 0px 0px 5px 2px rgb(0, 0, 0);
+            opacity: 0;
+            transition: 0.5s;
+          
+
+        }
+        .showform{
+            opacity: 1;
+            transform: translate(-50%,-50%);
+            z-index: 10;
+           
+        }
+        input{
+            height: 30px;
+            width: 250px;
+            margin-top: 30px;
+            border: hidden;
+            border-bottom:1px solid rgba(192, 191, 191, 0.541);
+            outline: none;
+            font-size: 20px;
+            padding: 10px;
+        }
+        label{
+            font-size: 20px;
+        }
+.cross{
+   
+    color: black;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+.reg{
+    text-align: center;
+    font-size: 27px;
+}
+
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="model()">sign up</button>
+    <div class="overley"></div>
+    <div class="form">
+       <form action="">
+           <span class="cross" onclick="button()">&times;</span>
+            <h4 class="reg">Register</h4>
+           <div>  
+        <input type="text" placeholder="Username" ></div>
+       <div> 
+        <input type="text" placeholder="Email"></div>
+        <div>  
+            <input type="text" placeholder="Password" ></div>
+           <div> 
+            <div>  
+                <input type="text" placeholder="Confirm Password" ></div>
+               <div> 
+        <button class="btn1" >Create Account</button>
+            
+       </form>
+    </div>
+  
+  
+<script>
+
+function model(){
+    document.querySelector('.overley').classList.add('showoverley');
+    document.querySelector('.form').classList.add('showform');
+}
+
+function button(){
+    document.querySelector('.overley').classList.remove('showoverley');
+    document.querySelector('.form').classList.remove('showform');
+}
+
+</script>
+  
+  
+</body>
+</html>
